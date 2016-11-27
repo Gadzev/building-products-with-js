@@ -4,7 +4,8 @@
   "description": "Experts REST backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "eslint src/ && babel-node test/"
   },
   "keywords": [
     "rest",
@@ -12,5 +13,35 @@
     "experts"
   ],
   "author": "Aleksandar Gadjev",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gadzev/building-products-with-js.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.11.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "supertest": "^2.0.1",
+    "tape": "^4.6.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node",
+      "stage-0"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "winston": "^2.3.0"
+  }
 }
