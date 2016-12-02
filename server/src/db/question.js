@@ -1,7 +1,7 @@
 import {thinky} from './thinky';
 
 // Create a model - the table is automatically created
-const Question = thinky.createModel('Question', {
+export const Question = thinky.createModel('Question', {
     text: thinky.type.string().required(),
     creationDate: thinky.type.date().default(thinky.r.now()),
     expirationDate: thinky.type.date().required(),
@@ -12,5 +12,3 @@ const Question = thinky.createModel('Question', {
     }),
   ),
 });
-
-export {Question as default};

@@ -8,6 +8,7 @@
     "max-len": ["error", 120, 4],
     "indent": [0, tab],
     "no-unused-vars": ["error", {"argsIgnorePattern": "next"}],
-    "import/no-extraneous-dependencies": [2, { devDependencies: true }]
+    "import/no-extraneous-dependencies": [2, { devDependencies: true }],
+    "import/prefer-default-export": "off"
   }
 }
