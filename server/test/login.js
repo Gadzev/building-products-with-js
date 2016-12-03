@@ -15,8 +15,8 @@ export default (test) => {
         const actualBody = res.body;
 
         t.error(err, 'No error');
-        t.ok(actualBody.user, 'User exists');
-        t.equal(actualBody.user.login, 'test', 'Login matches request');
+        t.ok(actualBody, 'User exists');
+        t.equal(actualBody.login, 'test', 'Login matches request');
         t.end();
       });
   });
