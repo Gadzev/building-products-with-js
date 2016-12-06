@@ -40,6 +40,7 @@ passport.use(new LocalStrategy({usernameField: 'login'}, async (login, password,
   },
 ));
 
+// use JWTStrategy
 const jwtOpts = {
     jwtFromRequest: ExtractJwt.fromHeader('x-access-token'),
     secretOrKey: authConfig.jwtSecret,
@@ -51,5 +52,5 @@ passport.use(new JwtStrategy(jwtOpts, async (payload, done) => {
         return done(null, false);
     }
     // return user if successful
-    return (null, user);
+    return done(null, user);
 }));
