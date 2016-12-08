@@ -9,6 +9,7 @@ import core from './core';
 import register from './register';
 import login from './login';
 import user from './user';
+import question from './question';
 
 export default (reqlite) => {
   thinky.dbReady().then(() => {
@@ -23,6 +24,7 @@ export default (reqlite) => {
     register(test);
     login(test);
     user(test);
+    question(test);
 
     // close db connections
     test((t) => {
