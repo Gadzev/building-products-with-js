@@ -24,7 +24,6 @@ export default (app) => {
         }
 
         // save new question
-        try {
         const question = new Question({
             text,
             expirationDate: moment(expirationDate).toDate(),
@@ -34,8 +33,5 @@ export default (app) => {
 
         // send created question back
         res.send(question);
-    } catch (e) {
-        res.status(400).send({error: e.toString()});
-    }
     }));
 };

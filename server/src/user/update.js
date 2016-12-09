@@ -59,13 +59,9 @@ export default (app) => {
     if (password) {
       user.password = hash(password);
     }
-    // try to save
-    try {
+    // try to save user
       await user.save();
-    } catch (e) {
-      res.status(400).send({error: e.toString()});
-      return;
-    }
+
 
     // send succcess
     delete user.password;
