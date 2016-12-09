@@ -12,7 +12,7 @@ variables:
   SERVER_RELEASE_IMAGE: lignux/bpwjs-server:latest
 
 before_script:
-  - docker login -u Gadzev -p $CI_DOCKERHUB_PASSWORD
+  - docker login -u gadzev -p $CI_DOCKERHUB_PASSWORD
 
 build-server:
   stage: build
