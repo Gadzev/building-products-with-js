@@ -1,0 +1,24 @@
+[1mdiff --git a/TODO..md b/TODO..md[m
+[1mindex 2bb896a..8468ed9 100644[m
+[1m--- a/TODO..md[m
+[1m+++ b/TODO..md[m
+[36m@@ -11,19 +11,3 @@[m
+     - Update question[m
+         - Answer question (part of update?)[m
+     - Delete question[m
+[31m-[m
+[31m-# DB struct[m
+[31m-[m
+[31m-- User:[m
+[31m-    - email[m
+[31m-    - Login[m
+[31m-    - password[m
+[31m-    - Registration date[m
+[31m-[m
+[31m-- Question:[m
+[31m-    - question text[m
+[31m-    - answers:[m
+[31m-        - User[m
+[31m-        - Answer value[m
+[31m-    - creation date[m
+[31m-    - expiration date[m
