@@ -4,7 +4,7 @@
   "description": "Experts portal client",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "node serve.js"
   },
   "repository": {
     "type": "git",
@@ -38,11 +38,14 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
+    "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
   },
   "dependencies": {
     "react": "^15.4.1",
