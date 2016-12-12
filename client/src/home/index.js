@@ -1,19 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router';
+import {connect} from 'react-redux';
 
-export default class Home extends React.Component {
-  constructor() {
-    super();
+import {helloWorldAction} from '../store';
 
-    this.state = {world: 'world'};
-  }
+const mapStateProps = state => ({
+  world: state.helloWorld.world,
+});
 
-  render() {
-    return (
-      <div className="jumbotron">
-        <h1> Hello {this.state.world}! </h1>
-        <Link to="/other">other</Link>
-      </div>
-    );
-  }
-}
+const mapDispatchProps = dispatch => ({
+  onClick: () => dispatch(helloWorldAction()),
+});
+
+const Home = ({onClick, world}) => (
+  <div className="jumbotron">
+    <h1>Hello {world}!</h1>
+    <button onClick={onClick}>Click me!</button>
+    <Link to="/other">other</Link>
+  </div>
+);
+
+export default connect(mapStateProps, mapDispatchProps)(Home);
