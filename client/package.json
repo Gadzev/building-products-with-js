@@ -48,6 +48,7 @@
     "webpack-hot-middleware": "^2.13.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "history": "^4.4.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
