@@ -1,3 +1,8 @@
 import {helloWorld} from './helloworld';
+import {login, register} from './auth';
 
-export default [helloWorld];
+export default [
+  login,
+  register,
+  helloWorld,
+];
